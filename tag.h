@@ -8,4 +8,17 @@ struct tag {
   struct tag* children[amount_children_tag_max];
 };
 
+int
+create_tag(
+  const char* name,
+  const struct tag* children[],
+
+  struct tag** tag_new
+);
+
+int
+delete_tag(
+  struct tag** tag
+);
+
 #endif
