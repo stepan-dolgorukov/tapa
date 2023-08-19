@@ -11,8 +11,6 @@ struct tag {
 int
 create_tag(
   const char* name,
-  const struct tag* children[],
-
   struct tag** tag_new
 );
 
