@@ -59,3 +59,33 @@ append_child(
   parent->child[index] = child;
   return 0;
 }
+
+int
+delete_tag(
+  const struct tag** tag
+) {
+
+  if (NULL == tag) {
+    return 1;
+  }
+
+  if (NULL == *tag) {
+    return 1;
+  }
+
+  size_t index = 0u;
+
+  while (index < amount_children_tag_max &&
+    NULL != (*tag)->child[index]) {
+
+    const struct tag* child = (*tag)->child[index];
+    delete_tag(&child);
+
+    ++index;
+  }
+
+  free((void*)(*tag));
+  *tag = NULL;
+
+  return 0;
+}
