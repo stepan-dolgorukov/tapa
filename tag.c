@@ -29,7 +29,7 @@ create_tag(
   }
 
   strncpy((*tag_new)->name, name, size_name_tag_max);
-  (*tag_new)->children[0] = NULL;
+  (*tag_new)->child[0] = NULL;
 
   return 0;
 }
@@ -47,7 +47,7 @@ append_child(
   size_t index = 0u;
 
   while (index < amount_children_tag_max &&
-    NULL != parent->children[index]) {
+    NULL != parent->child[index]) {
 
     ++index;
   }
@@ -56,6 +56,6 @@ append_child(
     return 1;
   }
 
-  parent->children[index] = child;
+  parent->child[index] = child;
   return 0;
 }
