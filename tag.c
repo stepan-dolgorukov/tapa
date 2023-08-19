@@ -33,3 +33,29 @@ create_tag(
 
   return 0;
 }
+
+int
+append_child(
+  struct tag* child,
+  struct tag* parent
+) {
+
+  if (NULL == parent) {
+    return 1;
+  }
+
+  size_t index = 0u;
+
+  while (index < amount_children_tag_max &&
+    NULL != parent->children[index]) {
+
+    ++index;
+  }
+
+  if (index >= amount_children_tag_max) {
+    return 1;
+  }
+
+  parent->children[index] = child;
+  return 0;
+}
