@@ -18,7 +18,7 @@ create_tag(
 
 int
 delete_tag(
-  struct tag** tag
+  const struct tag** tag
 );
 
 #endif
