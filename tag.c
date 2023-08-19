@@ -31,6 +31,7 @@ create_tag(
   }
 
   strncpy((*tag_new)->name, name, size_name_tag_max);
+  (*tag_new)->children[0] = NULL;
 
   if (NULL != children) {
 
