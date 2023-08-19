@@ -15,6 +15,12 @@ create_tag(
 );
 
 int
+append_child(
+  struct tag* child,
+  struct tag* parent
+);
+
+int
 delete_tag(
   const struct tag** tag
 );
