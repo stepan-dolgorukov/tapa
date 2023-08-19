@@ -21,6 +21,11 @@ create_tag(
     return 1;
   }
 
+  if (0u == strlen(name)) {
+
+    return 1;
+  }
+
   *tag_new = (struct tag*)malloc(sizeof(struct tag));
 
   if (NULL == *tag_new) {
