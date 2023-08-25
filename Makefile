@@ -1,5 +1,8 @@
 CC := /usr/bin/gcc
-CFLAGS := -std=c99
+CFLAGS := \
+  -std=c99 \
+  -Wall \
+  -Wextra
 
 launch: tag.o launch.o
 	$(CC) tag.o launch.o -o launch
