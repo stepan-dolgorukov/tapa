@@ -49,8 +49,20 @@ append_child(
     return 1;
   }
 
-  size_t index = 0u;
+  size_t index;
 
+  index = 0u;
+  while (index < amount_children_tag_max &&
+    NULL != parent->child[index]) {
+
+    if (0 == strcmp(parent->child[index]->name, child->name)) {
+      return 1;
+    }
+
+    ++index;
+  }
+
+  index = 0u;
   while (index < amount_children_tag_max &&
     NULL != parent->child[index]) {
 
