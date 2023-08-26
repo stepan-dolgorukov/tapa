@@ -53,6 +53,10 @@ append_child(
     return 1;
   }
 
+  if (child == parent) {
+    return 1;
+  }
+
   size_t index;
 
   index = 0u;
