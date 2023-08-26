@@ -49,6 +49,10 @@ append_child(
     return 1;
   }
 
+  if (NULL == child) {
+    return 1;
+  }
+
   size_t index;
 
   index = 0u;
