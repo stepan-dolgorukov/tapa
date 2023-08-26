@@ -5,7 +5,7 @@ CFLAGS := \
   -Wextra
 
 launch: tag.o launch.o
-	$(CC) tag.o launch.o -o launch
+	$(CC) $(CFLAGS) tag.o launch.o -o launch
 
 tag.o: tag.c
 	$(CC) $(CFLAGS) -c tag.c -o tag.o
