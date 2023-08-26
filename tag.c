@@ -34,7 +34,10 @@ create_tag(
   }
 
   strncpy((*tag_new)->name, name, size_name_tag_max);
-  (*tag_new)->child[0] = NULL;
+
+  for (size_t index = 0u; index < amount_children_tag_max; ++index) {
+    (*tag_new)->child[index] = NULL;
+  }
 
   return 0;
 }
