@@ -25,4 +25,10 @@ append_child(
   struct tag* parent
 );
 
+int
+remove_child(
+  struct tag* parent,
+  const char* name
+);
+
 #endif
