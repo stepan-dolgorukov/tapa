@@ -106,3 +106,33 @@ delete_tag(
 
   return 0;
 }
+
+int
+remove_child(
+  struct tag *parent,
+  const char *name
+) {
+
+  if (NULL == parent) {
+    return 1;
+  }
+
+  if (NULL == name) {
+    return 1;
+  }
+
+  size_t index;
+
+  index = 0u;
+  while (index < amount_children_tag_max &&
+    0 != strcmp(parent->child[index]->name, name)) {
+
+    ++index;
+  }
+
+  if (index >= amount_children_tag_max) {
+    return 1;
+  }
+
+  return delete_tag(&parent->child[index]);
+}
