@@ -7,5 +7,5 @@ CFLAGS := \
 example: example.o
 	$(CC) $(CFLAGS) example.o -o example -L. -ltapa
 
-example.o: example.c tag.h
+example.o: example.c tag.h settings.h
 	$(CC) $(CFLAGS) -c example.c -o example.o
