@@ -105,11 +105,7 @@ delete_tag(
 
   while (index < amount_children_tag_max) {
 
-    if (NULL != (*tag)->child[index]) {
-      const struct tag* child = (*tag)->child[index];
-      delete_tag(&child);
-    }
-
+    delete_tag(&((*tag)->child[index]));
     ++index;
   }
 
