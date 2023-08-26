@@ -5,7 +5,7 @@
 
 struct tag {
   char name[size_name_tag_max];
-  const struct tag* child[amount_children_tag_max];
+  struct tag* child[amount_children_tag_max];
 };
 
 int
@@ -16,7 +16,7 @@ create_tag(
 
 int
 delete_tag(
-  const struct tag** tag
+  struct tag** tag
 );
 
 int

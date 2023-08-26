@@ -90,7 +90,7 @@ append_child(
 
 int
 delete_tag(
-  const struct tag** tag
+  struct tag** tag
 ) {
 
   if (NULL == tag) {
