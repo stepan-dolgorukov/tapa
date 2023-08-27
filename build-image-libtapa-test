@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 id_commit_head=`git rev-parse --short HEAD`
-docker build -t libtapa-test-${id_commit_head} -f docker-libtapa-test .
+tag_image_libtapa_test=libtapa-test-${id_commit_head}
+
+docker build -t ${tag_image_libtapa_test} -f docker-libtapa-test .
