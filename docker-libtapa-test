@@ -1,0 +1,19 @@
+FROM archlinux:latest
+WORKDIR /libtapa-test
+
+COPY tapa.h .
+COPY settings.h .
+COPY tag.h .
+
+COPY tag.c .
+COPY make/libtapa make-libtapa
+
+COPY libtapa-test.c .
+COPY make/libtapa-test make-libtapa-test
+
+RUN pacman -Syuv gcc make --noconfirm && \
+    make -f make-libtapa && \
+    make -f make-libtapa-test
+
+ENV LD_LIBRARY_PATH=.
+CMD ["./libtapa-test"]
