@@ -6,14 +6,14 @@ COPY settings.h .
 COPY tag.h .
 
 COPY tag.c .
-COPY make/libtapa make-libtapa
+COPY make/libtapa.mk libtapa.mk
 
 COPY libtapa-test.c .
-COPY make/libtapa-test make-libtapa-test
+COPY make/libtapa-test.mk libtapa-test.mk
 
 RUN pacman -Syuv gcc make --noconfirm && \
-    make -f make-libtapa && \
-    make -f make-libtapa-test
+    make -f libtapa.mk && \
+    make -f libtapa-test.mk
 
 ENV LD_LIBRARY_PATH=.
 CMD ["./libtapa-test"]
