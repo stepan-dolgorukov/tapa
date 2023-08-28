@@ -1,11 +1,15 @@
 #include "tapa.h"
 
 #include <assert.h>
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void
 test_tag_no_children(void) {
+
+  printf("%s\n", __FUNCTION__);
+
   struct tag *root;
   int status;
   size_t index;
