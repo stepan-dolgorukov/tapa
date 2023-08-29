@@ -12,8 +12,8 @@ COPY libtapa-test.c .
 COPY make/libtapa-test.mk libtapa-test.mk
 
 RUN pacman -Syuv gcc make --noconfirm && \
-    make -f libtapa.mk && \
-    make -f libtapa-test.mk
+    make --file libtapa.mk && \
+    make --file libtapa-test.mk
 
 ENV LD_LIBRARY_PATH=.
 CMD ["./libtapa-test"]
