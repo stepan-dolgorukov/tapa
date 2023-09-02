@@ -16,4 +16,4 @@ RUN pacman -Syuv gcc make --noconfirm && \
     make --file libtapa-test.mk
 
 ENV LD_LIBRARY_PATH=.
-CMD ["./libtapa-test"]
+ENTRYPOINT ["./libtapa-test"]
