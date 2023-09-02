@@ -24,7 +24,8 @@ test_tag_no_children(void) {
     assert(NULL == root->child[index]);
   }
 
-  delete_tag(&root);
+  status = delete_tag(&root);
+  assert(0 == status);
   assert(NULL == root);
 }
 
