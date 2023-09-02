@@ -1,0 +1,7 @@
+Language: Cpp
+UseTab: Never
+IndentWidth: 2
+ColumnLimit: 80
+PointerAlignment: Left
+SeparateDefinitionBlocks: Always
+AlwaysBreakAfterReturnType: TopLevel
