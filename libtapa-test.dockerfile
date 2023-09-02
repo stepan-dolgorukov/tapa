@@ -3,9 +3,10 @@ WORKDIR /libtapa-test
 
 RUN pacman -Syuv gcc make --noconfirm
 
-COPY tapa.h .
-COPY settings.h .
-COPY tag.h .
+COPY tapa.h \
+     settings.h \
+     tag.h \
+     ./
 
 COPY tag.c .
 COPY make/libtapa.mk libtapa.mk
