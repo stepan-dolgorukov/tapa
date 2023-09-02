@@ -7,7 +7,7 @@ tag_image_latest="${name_image}:latest"
 dockerfile="${name_image}.dockerfile"
 
 docker build \
-  -t "${tag_image_commit}" \
-  -t "${tag_image_latest}" \
-  -f "${dockerfile}" \
+  --tag "${tag_image_commit}" \
+  --tag "${tag_image_latest}" \
+  --file "${dockerfile}" \
   "$(pwd)"
