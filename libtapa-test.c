@@ -15,8 +15,8 @@ test_tag_no_children(void) {
   size_t index;
 
   root = NULL;
-  status = create_tag("root", &root);
 
+  status = create_tag("root", &root);
   assert(0 == status);
   assert(0 == strcmp("root", root->name));
 
