@@ -66,8 +66,8 @@ test_tag_with_children(void) {
   status = append_child(right, root);
   assert(0 == status);
 
-  delete_tag(&root);
-
+  status = delete_tag(&root);
+  assert(0 == status);
   assert(NULL == root);
 }
 
