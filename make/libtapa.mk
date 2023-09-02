@@ -4,6 +4,13 @@ CFLAGS := \
   -Wall \
   -Wextra
 
+ifeq ($(SANITIZE),yes)
+CFLAGS += \
+  -O0 \
+  -ggdb \
+  -fsanitize=address
+endif
+
 libtapa.so: tag.o
 	$(CC) $(CFLAGS) tag.o -shared -o libtapa.so
 

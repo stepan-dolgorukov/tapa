@@ -13,6 +13,8 @@ COPY make/libtapa.mk libtapa.mk
 COPY libtapa-test.c .
 COPY make/libtapa-test.mk libtapa-test.mk
 
+ENV SANITIZE="yes"
+
 RUN make --file libtapa.mk && \
     make --file libtapa-test.mk
 
