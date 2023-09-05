@@ -1,7 +1,7 @@
 NAME_IMAGE := libtapa-test
 DOCKERFILE := "${NAME_IMAGE}.dockerfile"
 
-ID_COMMIT_HEAD := $(shell git rev-parse --short HEAD)
+ID_COMMIT_HEAD != git rev-parse --short HEAD
 TAG_IMAGE_COMMIT := $(NAME_IMAGE):$(ID_COMMIT_HEAD)
 TAG_IMAGE_LATEST := $(NAME_IMAGE):latest
 
