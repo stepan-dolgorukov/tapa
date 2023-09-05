@@ -10,7 +10,7 @@ test_tag_no_children(void) {
 
   printf("%s\n", __FUNCTION__);
 
-  struct tag *root;
+  struct tag* root;
   int status;
   size_t index;
 
@@ -71,7 +71,8 @@ test_tag_with_children(void) {
   assert(NULL == root);
 }
 
-int main(void) {
+int
+main(void) {
   test_tag_no_children();
   test_tag_with_children();
 

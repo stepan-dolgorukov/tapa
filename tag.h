@@ -9,26 +9,15 @@ struct tag {
 };
 
 int
-create_tag(
-  const char* name,
-  struct tag** tag_new
-);
+create_tag(const char* name, struct tag** tag_new);
 
 int
-delete_tag(
-  struct tag** tag
-);
+delete_tag(struct tag** tag);
 
 int
-append_child(
-  struct tag* child,
-  struct tag* parent
-);
+append_child(struct tag* child, struct tag* parent);
 
 int
-remove_child(
-  struct tag* parent,
-  const char* name
-);
+remove_child(struct tag* parent, const char* name);
 
 #endif

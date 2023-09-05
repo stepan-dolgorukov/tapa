@@ -1,15 +1,12 @@
 #include "tag.h"
 #include "settings.h"
 
-#include <stdlib.h>
 #include <stddef.h>
+#include <stdlib.h>
 #include <string.h>
 
 int
-create_tag(
-  const char* name,
-  struct tag** tag_new
-) {
+create_tag(const char* name, struct tag** tag_new) {
 
   if (NULL == tag_new) {
 
@@ -43,10 +40,7 @@ create_tag(
 }
 
 int
-append_child(
-  struct tag* child,
-  struct tag* parent
-) {
+append_child(struct tag* child, struct tag* parent) {
 
   if (NULL == parent) {
     return 1;
@@ -63,8 +57,7 @@ append_child(
   size_t index;
 
   index = 0u;
-  while (index < amount_children_tag_max &&
-    NULL != parent->child[index]) {
+  while (index < amount_children_tag_max && NULL != parent->child[index]) {
 
     if (0 == strcmp(parent->child[index]->name, child->name)) {
       return 1;
@@ -74,8 +67,7 @@ append_child(
   }
 
   index = 0u;
-  while (index < amount_children_tag_max &&
-    NULL != parent->child[index]) {
+  while (index < amount_children_tag_max && NULL != parent->child[index]) {
 
     ++index;
   }
@@ -89,9 +81,7 @@ append_child(
 }
 
 int
-delete_tag(
-  struct tag** tag
-) {
+delete_tag(struct tag** tag) {
 
   if (NULL == tag) {
     return 1;
@@ -116,10 +106,7 @@ delete_tag(
 }
 
 int
-remove_child(
-  struct tag *parent,
-  const char *name
-) {
+remove_child(struct tag* parent, const char* name) {
 
   if (NULL == parent) {
     return 1;
@@ -133,7 +120,7 @@ remove_child(
 
   index = 0u;
   while (index < amount_children_tag_max &&
-    0 != strcmp(parent->child[index]->name, name)) {
+         0 != strcmp(parent->child[index]->name, name)) {
 
     ++index;
   }
