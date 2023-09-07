@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-make && \
+make --file tapa-test.mk && \
 docker run --rm tapa-test:latest
