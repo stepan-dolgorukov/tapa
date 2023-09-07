@@ -9,15 +9,15 @@ COPY tapa.h \
      ./
 
 COPY tag.c .
-COPY make/libtapa.mk libtapa.mk
+COPY make/tapa.mk tapa.mk
 
-COPY libtapa-test.c .
-COPY make/libtapa-test.mk libtapa-test.mk
+COPY tapa-test.c .
+COPY make/tapa-test.mk tapa-test.mk
 
 ENV SANITIZE="yes"
 
-RUN make --file libtapa.mk && \
-    make --file libtapa-test.mk
+RUN make --file tapa.mk && \
+    make --file tapa-test.mk
 
 ENV LD_LIBRARY_PATH=.
-ENTRYPOINT [ "./libtapa-test" ]
+ENTRYPOINT [ "./tapa-test" ]

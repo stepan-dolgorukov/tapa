@@ -1,4 +1,4 @@
-NAME_IMAGE := libtapa-cppcheck
+NAME_IMAGE := tapa-cppcheck
 DOCKERFILE := ${NAME_IMAGE}.dockerfile
 
 ID_COMMIT_HEAD != git rev-parse --short HEAD

@@ -1,4 +1,4 @@
-NAME_IMAGE := libtapa-test
+NAME_IMAGE := tapa-test
 DOCKERFILE := "${NAME_IMAGE}.dockerfile"
 
 ID_COMMIT_HEAD != git rev-parse --short HEAD
