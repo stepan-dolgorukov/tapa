@@ -1,7 +1,7 @@
 FROM archlinux:latest
 WORKDIR /libtapa-test
 
-RUN pacman -Syuv gcc make --noconfirm
+RUN pacman -Syu gcc make --noconfirm
 
 COPY tapa.h \
      settings.h \
