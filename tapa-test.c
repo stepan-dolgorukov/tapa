@@ -30,7 +30,7 @@ test_tag_no_children(void) {
 }
 
 void
-test_tag_with_children(void) {
+test_appending_children(void) {
 
   printf("%s\n", __FUNCTION__);
 
@@ -74,7 +74,7 @@ test_tag_with_children(void) {
 int
 main(void) {
   test_tag_no_children();
-  test_tag_with_children();
+  test_appending_children();
 
   return 0;
 }
