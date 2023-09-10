@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-make --file tapa-test.mk && \
-docker run --rm tapa-test:latest
+export NAME_IMAGE='tapa-test'
+
+make "image-${NAME_IMAGE}" && \
+docker run --rm "${NAME_IMAGE}":latest
