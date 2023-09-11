@@ -2,5 +2,5 @@
 
 export NAME_IMAGE='tapa-cppcheck'
 
-make "image-${NAME_IMAGE}" && \
+make --file "${NAME_IMAGE}.mk" && \
 docker run --rm "${NAME_IMAGE}":latest
