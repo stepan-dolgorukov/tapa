@@ -120,6 +120,7 @@ remove_child(struct tag* parent, const char* name) {
 
   index = 0u;
   while (index < amount_children_tag_max &&
+         NULL != parent->child[index] &&
          0 != strcmp(parent->child[index]->name, name)) {
 
     ++index;
