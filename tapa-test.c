@@ -71,10 +71,69 @@ test_appending_children(void) {
   assert(NULL == root);
 }
 
+void
+test_remove_children(void) {
+
+  printf("%s\n", __FUNCTION__);
+
+  struct tag *root, *a, *b;
+  int status;
+
+  root = a = b = NULL;
+
+  {
+    status = create_tag(".", &root);
+    assert(0 == status);
+    assert(0 == strcmp(".", root->name));
+  }
+
+  {
+    status = create_tag("A", &a);
+    assert(0 == status);
+    assert(0 == strcmp("A", a->name));
+  }
+
+  {
+    status = create_tag("B", &b);
+    assert(0 == status);
+    assert(0 == strcmp("B", b->name));
+  }
+
+  {
+    status = append_child(a, root);
+    assert(0 == status);
+    assert(a == root->child[0]);
+  }
+
+  {
+    status = append_child(b, root);
+    assert(0 == status);
+    assert(b == root->child[1]);
+  }
+
+  {
+    status = remove_child(root, "A");
+    assert(0 == status);
+    assert(NULL == root->child[0]);
+  }
+
+  {
+    status = remove_child(root, "A");
+    assert(1 == status);
+  }
+
+  {
+    status = delete_tag(&root);
+    assert(0 == status);
+    assert(NULL == root);
+  }
+}
+
 int
 main(void) {
   test_tag_no_children();
   test_appending_children();
+  test_remove_children();
 
   return 0;
 }
