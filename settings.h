@@ -5,5 +5,6 @@
 #define amount_children_tag_max (8u)
 
 #define size_description_response_max (256u)
+#define size_value_tag_max (32u)
 
 #endif
