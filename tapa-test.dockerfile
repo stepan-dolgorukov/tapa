@@ -6,14 +6,13 @@ RUN pacman -Syu gcc make --noconfirm
 COPY tapa.h \
      settings.h \
      tag.h \
-     tag_value.h \
+     value_tag.h \
      type_value.h \
+     tag.c \
+     tapa-test.c \
      ./
 
-COPY tag.c .
 COPY make/tapa.mk tapa.mk
-
-COPY tapa-test.c .
 COPY make/tapa-test.mk tapa-test.mk
 
 ENV SANITIZE="yes"
