@@ -6,6 +6,8 @@ RUN pacman -Syu gcc make --noconfirm
 COPY tapa.h \
      settings.h \
      tag.h \
+     tag_value.h \
+     type_value.h \
      ./
 
 COPY tag.c .
