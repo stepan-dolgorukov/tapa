@@ -6,8 +6,11 @@ RUN pacman -Syu --noconfirm cppcheck
 COPY \
   tapa.h \
   settings.h \
+  value_tag.h \
+  type_value.h \
   tag.h \
   tag.c \
+  tapa-test.c \
   ./
 
 ENTRYPOINT [ \
