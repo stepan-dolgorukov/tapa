@@ -18,5 +18,5 @@ ENTRYPOINT [ \
   "--std=c89", \
   "--report-progress", \
   "--language=c", \
-  "--enable=portability,performance", \
+  "--enable=style,performance,portability,warning", \
   "." ]
