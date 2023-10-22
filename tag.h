@@ -11,7 +11,9 @@ struct tag {
 };
 
 int
-create_tag(const char* name, struct tag** tag_new);
+create_tag(const char* name,
+           struct tag** tag_new,
+           struct value_tag*);
 
 int
 delete_tag(struct tag** tag);

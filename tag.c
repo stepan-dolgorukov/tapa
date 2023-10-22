@@ -6,7 +6,9 @@
 #include <string.h>
 
 int
-create_tag(const char* name, struct tag** tag_new) {
+create_tag(const char* name,
+           struct tag** tag_new,
+           struct value_tag value) {
 
   if (NULL == tag_new) {
 
