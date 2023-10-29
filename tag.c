@@ -8,7 +8,7 @@
 int
 create_tag(const char* name,
            struct tag** tag_new,
-           struct value_tag value) {
+           struct value_tag* value) {
 
   if (NULL == tag_new) {
 
