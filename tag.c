@@ -40,6 +40,8 @@ create_tag(const char* name,
     (*tag_new)->child[index] = NULL;
   }
 
+  (*tag_new)->value = value;
+
   return 0;
 }
 
