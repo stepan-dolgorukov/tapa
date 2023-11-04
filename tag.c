@@ -10,6 +10,8 @@ create_tag(const char* name,
            struct tag** tag_new,
            struct value_tag* value) {
 
+  size_t index;
+
   if (NULL == tag_new) {
 
     return 1;
@@ -34,7 +36,7 @@ create_tag(const char* name,
 
   strncpy((*tag_new)->name, name, size_name_tag_max);
 
-  for (size_t index = 0u; index < amount_children_tag_max; ++index) {
+  for (index = 0u; index < amount_children_tag_max; ++index) {
     (*tag_new)->child[index] = NULL;
   }
 
