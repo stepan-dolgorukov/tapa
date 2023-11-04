@@ -5,7 +5,7 @@
 #include "value_tag.h"
 
 struct tag {
-  struct value_tag value;
+  struct value_tag* value;
   char name[size_name_tag_max];
   struct tag* child[amount_children_tag_max];
 };
