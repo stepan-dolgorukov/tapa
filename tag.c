@@ -42,7 +42,8 @@ create_tag(const char* name,
 }
 
 int
-append_child(struct tag* child, struct tag* parent) {
+append_child(struct tag* child,
+             struct tag* parent) {
 
   if (NULL == parent) {
     return 1;
@@ -108,7 +109,8 @@ delete_tag(struct tag** tag) {
 }
 
 int
-remove_child(struct tag* parent, const char* name) {
+remove_child(struct tag* parent,
+             const char* name) {
 
   if (NULL == parent) {
     return 1;
